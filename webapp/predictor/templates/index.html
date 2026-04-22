@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Churn Prediction</title>
+</head>
+<body>
+
+<h2>Customer Churn Prediction</h2>
+
+<form method="POST">
+    {% csrf_token %}
+
+    Age: <input type="number" name="age"><br><br>
+    Total Purchase: <input type="number" step="any" name="purchase"><br><br>
+    Account Manager (0 or 1): <input type="number" name="manager"><br><br>
+    Years: <input type="number" step="any" name="years"><br><br>
+    Number of Sites: <input type="number" name="sites"><br><br>
+
+    <button type="submit">Predict</button>
+</form>
+
+<h3>{{ result }}</h3>
+
+</body>
+</html>
